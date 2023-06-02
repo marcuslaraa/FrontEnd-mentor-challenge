@@ -11,11 +11,22 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | QR code component</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
     <style>
+      :root {
+        --font-Primary: 'Outfit', sans-serif;
+      }
+
+
+      body {
+        background-color: hsl(212, 45%, 89%);
+        text-align: center;
+        padding: 4rem 1rem;
+      }
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -23,16 +34,55 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        background-color: #fff;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        font-family: var(--font-Primary);
+      }
+
+      .image-qr {
+        width: 100%;
+        border-radius: 0.6rem;
+      }
+
+      .container__title {
+        color: #1f3251;
+        font-weight: 700;
+      }
+
+      .container__paragraph {
+        font-size: 15px;
+        color: #7b879d;
+        font-weight: 700;
+      }
     </style>
   </head>
   <body>
-    Improve your front-end skills by building projects Scan the QR code to visit
-    Frontend Mentor and take your coding skills to the next level
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+    <div class="container">
+      <img
+        class="image-qr"
+        src="images/image-qr-code.png"
+        alt="image QR Code"
+      />
+      <h2 class="container__title">
+        Improve your front-end skills by building projects
+      </h2>
+      <p class="container__paragraph">
+        Scan the QR code to visit Frontend Mentor and take your coding skills to
+        the next level
+      </p>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
     </div>
   </body>
 </html>
